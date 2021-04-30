@@ -12,7 +12,8 @@ const CategorySchema: Schema<ICategoryDoc> = new Schema({
     },
     price: {
         type: Number,
-        required: false
+        required: false,
+
     },
     ancestors: {
         type: Array,
@@ -20,7 +21,11 @@ const CategorySchema: Schema<ICategoryDoc> = new Schema({
         required: true,
         index: true
     }
-});
+},
+{ 
+    versionKey: false // bad practice, but just for tests
+}
+);
 
 // Requered in order to not allow to create identical sub-catagories for a category
 CategorySchema.index({ categoryId: 1, parent: 1 }, { unique: true, sparse: true });

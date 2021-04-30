@@ -30,7 +30,7 @@
                 "ancestors": ["Clothing", "Men Clothing"]
             },
             {
-                "categoryId": "Shirts",
+                "categoryId": "TShirts",
                 "parent": "Women Clothing",
                 "ancestors": ["Clothing", "Women Clothing"]
             },
@@ -43,5 +43,30 @@
                 "categoryId": "Underwear",
                 "parent": "Women Clothing",
                 "ancestors": ["Clothing", "Women Clothing"]
-            }
+            },
+                {
+                    "categoryId": "Underwear yello",
+                    "parent": "Underwear",
+                    "price": 100,
+                    "ancestors": ["Clothing", "Women Clothing", "Underwear"]
+                },
+                {
+                    "categoryId": "Underwear red",
+                    "parent": "Underwear",
+                    "price": 250,
+                    "ancestors": ["Clothing", "Women Clothing", "Underwear"]
+                },
+                {
+                    "categoryId": "Jeans slim",
+                    "parent": "Jeans",
+                    "price": 150,
+                    "ancestors": ["Clothing", "Women Clothing", "Jeans"]
+                },
+                {
+                    "categoryId": "Jeans big",
+                    "parent": "Jeans",
+                    "price": 300,
+                    "ancestors": ["Clothing", "Women Clothing", "Jeans"]
+                }
+
 ]

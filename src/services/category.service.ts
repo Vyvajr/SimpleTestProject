@@ -1,4 +1,3 @@
-import CategoryModel from '../db/models/category.model';
 import { ICategory, ICategoryDoc, ICategoryModel, ICategoryResult } from '../interfaces/category.interface'; 
 import { TreeNode } from '../interfaces/treenode.interface';
 import { SimpleResponse } from '../interfaces/simpleResponse.interface';
@@ -18,12 +17,12 @@ export default class CategoryService {
             const position: number = ancestors.length -1;
             parent =  ancestors[position];
             // get parent category
-            console.log(ancestors.filter((value,index) => index !== position));
+            // console.log(ancestors.filter((value,index) => index !== position));
             const parentDoc: ICategoryDoc | null = await this.categoryModel.findOne({ 
                 ancestors: ancestors.filter((value,index) => index !== position),
                 categoryId: parent
             });
-    
+
             if(!parentDoc)  
                 return {
                     status: 404,
@@ -41,6 +40,7 @@ export default class CategoryService {
         //const ancestors: Array<string> = parentDoc? [...parentDoc.ancestors, parent]: [parent];
         let category: ICategory = {
             categoryId: categoryId,
+            //parent: parent === ''? ancestors[0]: parent,
             parent: parent,
             ancestors: ancestors
         }
@@ -155,7 +155,7 @@ export default class CategoryService {
             if (node.parent) {
                 // adds children to the parent node
                 list[map[<string> node.parent]].children.push(this.getTreeNode(node));
-                console.log(list);
+                // console.log(list);
             } else {
                 // push parent node, creates a reference to the list
                 roots.push({

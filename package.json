@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test-dev": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register test/**/*.test.ts\"",
-    "test": " set NODE_ENV=test && mocha -r ts-node/register test/**/*.ts",
-    "build": "tsc --project ./",
+    "test:windows": "set NODE_ENV=test && mocha --timeout 10000 -r ts-node/register test/**/*.ts",
+    "test:linux": "NODE_ENV=test && mocha --timeout 10000 -r ts-node/register test/**/*.ts",
+    "build": "tsc --project ./dist",
     "start": "ts-node-dev src/app.ts"
   },
   "keywords": [],
