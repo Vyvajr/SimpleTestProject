@@ -1,9 +1,9 @@
 # RUN THE APPLICATION
 
 1. Go to project dir via comand line interface
-    cd {PROJECT_DIR}
+    - cd {PROJECT_DIR}
 2. Execute docker compose command
-    docker-compose up
+    - docker-compose up
 
 # STOP THE APP
 
