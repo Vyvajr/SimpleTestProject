@@ -23,14 +23,14 @@
 
 # API`s will be available on port 3001
 ### get tree view
-    - curl --location --request GET 'localhost:3001/category/treeView'
+    curl --location --request GET 'localhost:3001/category/treeView'
 ### add a category
-    - curl --location --request POST 'localhost:3001/category' \
-    - --header 'Content-Type: application/json' \
-    - --data-raw '{
-    -    "categoryId": "Blue Shirt",
-    -    "ancestors": ["Clothing", "Men Clothing", "Shirts"],
-    -    "price": 100
-    - }'
+    curl --location --request POST 'localhost:3001/category' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "categoryId": "Blue Shirt",
+        "ancestors": ["Clothing", "Men Clothing", "Shirts"],
+        "price": 100
+    }'
 ### get sales
-    - curl --location --request GET 'localhost:3001/category/sales/Blue Shirt'
+    curl --location --request GET 'localhost:3001/category/sales/Blue Shirt'
