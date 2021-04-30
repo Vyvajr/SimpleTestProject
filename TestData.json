@@ -1,0 +1,47 @@
+[
+    {
+        "categoryId": "Clothing",
+        "parent": "",
+        "ancestors": []
+    },
+        {
+            "categoryId": "Men Clothing",
+            "parent": "Clothing",
+            "ancestors": ["Clothing"]
+        },
+        {
+            "categoryId": "Women Clothing",
+            "parent": "Clothing",
+            "ancestors": ["Clothing"]
+        },
+            {
+                "categoryId": "Shirts",
+                "parent": "Men Clothing",
+                "ancestors": ["Clothing", "Men Clothing"]
+            },
+            {
+                "categoryId": "Jeans",
+                "parent": "Men Clothing",
+                "ancestors": ["Clothing", "Men Clothing"]
+            },
+            {
+                "categoryId": "Underwear",
+                "parent": "Men Clothing",
+                "ancestors": ["Clothing", "Men Clothing"]
+            },
+            {
+                "categoryId": "Shirts",
+                "parent": "Women Clothing",
+                "ancestors": ["Clothing", "Women Clothing"]
+            },
+            {
+                "categoryId": "Jeans",
+                "parent": "Women Clothing",
+                "ancestors": ["Clothing", "Women Clothing"]
+            },
+            {
+                "categoryId": "Underwear",
+                "parent": "Women Clothing",
+                "ancestors": ["Clothing", "Women Clothing"]
+            }
+]
