@@ -5,20 +5,6 @@
 2. Execute docker compose command
     docker-compose up
 
-API`s will be available on port 3001
-    ### get tree view
-    - curl --location --request GET 'localhost:3001/category/treeView'
-    ### add a category
-    - curl --location --request POST 'localhost:3001/category' \
-    - --header 'Content-Type: application/json' \
-    - --data-raw '{
-    -    "categoryId": "Blue Shirt",
-    -    "ancestors": ["Clothing", "Men Clothing", "Shirts"],
-    -    "price": 100
-    - }'
-    ### get sales
-    - curl --location --request GET 'localhost:3001/category/sales/Blue Shirt'
-
 # STOP THE APP
 
 1. Go to project dir via comand line interface
@@ -34,3 +20,17 @@ API`s will be available on port 3001
 2. Run command to execute tests
     - npm run test:windows <-- WINDOWS
     - npm run test:linux   <-- LINUX
+
+# API`s will be available on port 3001
+### get tree view
+    - curl --location --request GET 'localhost:3001/category/treeView'
+### add a category
+    - curl --location --request POST 'localhost:3001/category' \
+    - --header 'Content-Type: application/json' \
+    - --data-raw '{
+    -    "categoryId": "Blue Shirt",
+    -    "ancestors": ["Clothing", "Men Clothing", "Shirts"],
+    -    "price": 100
+    - }'
+### get sales
+    - curl --location --request GET 'localhost:3001/category/sales/Blue Shirt'
